@@ -28,7 +28,19 @@ npm install dotenv
 
 #
 
-## 4º Colocar o contrato no diretório contracts
+## 4º Colocar o contrato no diretório contracts e importa-lo em /migrations/2_deploy_contracts.js
+
+Será necessario instanciar o contrato no arquivo js.
+
+Ex.:
+
+```
+var ContratoExemplo = artifacts.require("./ContratoExemplo");
+
+module.exports = function(deployer) {
+  // deployer.deploy(ContratoExemplo, "Mensagem de descricao");
+};
+```
 
 #
 
